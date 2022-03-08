@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>friend movie</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>WebFont.load({
+        google: {
+            families: ['Roboto Slab']
+        }
+    })</script>
+
+    <style>
+        .darkmode {
+            background-color: black;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .wowww {
+            text-align: center;
+            margin-top: auto;
+            margin-bottom: auto;
+            font-size: 40px;
+
+            animation: tada;
+            animation-duration: 1s;
+        }
+
+        marquee {
+            margin-top: 2.4em;
+        }
+
+        #particles-js {
+            all: initial;
+            all: unset;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -5;
+        }
+
+        .smallerbox {
+            margin: 8px;
+        }
+
+        @keyframes flipmodegobrrr {
+            0% {transform: rotate(0deg)}
+            85% {transform: rotate(0deg)}
+            90% {transform: rotate(180deg)}
+            95% {transform: rotate(180deg)}
+            100% {transform: rotate(360deg)}
+        }
+
+        @keyframes blurmodegobrrr {
+            0% {}
+        }
+
+        iframe {
+            animation-name: flipmodegobrrr;
+            animation-duration: 234s;
+        }
+    </style>
+</head>
+
+<body class="darkmode">
+
+<div id="particles-js">
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <marquee direction="right">
+            <div class="animate__animated animate__rubberBand animate__infinite animate__delay-2"
+                 style="margin: 0.5em;">
+                <h2>friend movie</h2>
+            </div>
+        </marquee>
+    </div>
+    <div class="row">
+        <div class="col wowww">
+            <div class="animate__animated animate__tada animate__infinite smallerbox">
+                <b>wow!</b>
+            </div>
+        </div>
+        <div class="col">
+            <iframe id="friendmovie" width="1280" height="720"
+                    src="https://www.youtube.com/embed/AXfZxNPx29E?rel=0&autoplay=1"
+                    title="friend movie" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+        <div class="col wowww">
+            <div class="animate__animated animate__tada animate__infinite smallerbox">
+                <b>wow!</b>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col wowww">
+            <a href="https://steamcommunity.com/groups/friendmovie"><b>official friend movie fan club!!!</b></a>
+            <br>
+            <br>
+            <b id="friendstuff"></b>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<footer>
+    <script src="{{ url_for('static', filename='js/particles.min.js') }}"></script>
+    <script>
+        particlesJS.load('particles-js', '{{ url_for('static', filename='cfg/particles.json') }}', function () {
+            console.log('friend movie viewing experience initialised')
+        })
+
+
+        let friendTexts = [
+            "if you replace the r in ireland with a c",
+            "iceland",
+            "doxxed",
+            "friend movei is a registered trademark of yuhnwood",
+            "yuhnwood lives on the east coast (NOT WEST)",
+            "im the chips guy",
+            "pumpkin",
+            "yuhn has 10000 seconds on devil daggers",
+            "yuhn has 100000 seconds on earth",
+            "this website is double-spelled",
+            "this website has been VAC-banned 238 days ago",
+            "this website used 2.3 GB of your data to load",
+            "go give fiona a coffee at her <a href=\"https://backstab.how/\">paypal</a>",
+            "A good spy against other players from what I saw. As a spy main for 5300 hours and 5 years, I could see the trickstabs coming from a mile away. Good attempts though where a normal player would've gotten trickstabbed, I'm well above average so it wasnt going to work on me sadly <3. Overall, pretty good though :)",
+            "featuring sirtymoo",
+            "guess what timestamp sirtymoo is at",
+            "sirtymoo is in there but hidden",
+            "telephOWNED",
+            "Warfork is a demanding fast paced first person shooter with a focus on speed, aim, movement, and above all competitive play.",
+            "to make this website took 16 years, over $20 million in federal funds, and claimed the lives of 22 star-nosed moles",
+            "we know who you are",
+            "we know what you did",
+            "we know what kind of ice cream you prefer",
+            "we know",
+            "we know",
+            "yuhn's social security number is 7",
+            "yuhn's bank pin is 7",
+            "yuhn's steam password is 7",
+            "yuhn's credit card number is 7",
+            "yuhn's social security number is 8",
+            "yuhn's age would not fit on your screen",
+            "<a href=\"https://www.youtube.com/channel/UCfDDDq1y483kAnQYys4g5AA\" target=\"_blank\">subscribe</a>",
+            "<a href=\"https://www.youtube.com/channel/UCfDDDq1y483kAnQYys4g5AA\" target=\"_blank\">subscribe</a>",
+            "<a href=\"https://www.youtube.com/channel/UCfDDDq1y483kAnQYys4g5AA\" target=\"_blank\">subscribe (mandatory)</a>",
+            "<a href=\"https://www.youtube.com/channel/UCfDDDq1y483kAnQYys4g5AA\" target=\"_blank\">subscribe (please)</a>",
+            "<a href=\"javascript:close_window();\">subscribe</a>",
+            "check your outlets",
+            "don't get a new lamp",
+            "https://backstab.how",
+            "backstab.how",
+            "hey, sorry I saw your profile and I just thought you looked cute in your picture, I really wanted to tell you that)) It's really rare to see girls playing video games haha! I don't know why its a guy thing honestly im like really against misogyny and like ill be the one in the kitchen making sandwiches. We should really play l4d2 sometime its a really cool zombie game with a lot of scary moments, but don't worry ill be there to protect you ;) sorry that wasnt flirting I swear Im just trying to be friendly I really like your profile picture sorry was that too far? Really sorry i'm really shy I don't go out much haha add me on skype we should talk more you look really nice and fun xxx",
+            "silence your cell phones",
+            "all becomes one in this psychedelic fragging experience",
+            "\"Without doubt the greatest film I have laid eyes on.\" - Roger Ebert",
+            "\"really smooth movement and good surfs\" - Stephen Hawking",
+            "\"i hate you\" - anonymous friend",
+            "friend",
+            "movie",
+            "#friend #movie",
+            "#fragged!",
+            "you are in this frag compilation you just don't know it yet",
+            "you have been selected to cameo in friendmovie 2: still friending",
+            "go watch kpop frag by tgu",
+            "don't google \"tf2peptic\" at 3 am",
+            "it's lit!",
+            "tips are 20%",
+            "not because you're a rabbit,",
+            "avoid your friends with the social cloak and dagger",
+            "add 1 to the number 68 for a funny joke",
+            "this website was produced by a team of best-in-class, web-developing egrets",
+            "monke",
+            "<a href=\"https://ncatlab.org/nlab/show/cleavage\" target=\"_blank\">https://ncatlab.org/nlab/show/cleavage</a>",
+            "5134004 upside down",
+            "circle strafe this, casual",
+            "crd mode (+left)",
+            "this is not an ARG",
+            "\"Coolest website on the internet.\" - Forbes"
+        ];
+
+        function friendTextChanger() {
+            var idx = Math.floor(Math.random() * friendTexts.length);
+            document.getElementById("friendstuff").innerHTML = friendTexts[idx];
+        }
+
+        setInterval(friendTextChanger, 2000);
+        friendTextChanger();
+        console.log("thanks for coming to backstab.how, made by https://steamcommunity.com/id/parousia1729/ and https://steamcommunity.com/id/yuhnwood")
+        console.log("but if you came here to steal our stuff we don't thank you!!!! we hate you!!! enemymovie!!!!")
+    </script>
+</footer>
+</html>
