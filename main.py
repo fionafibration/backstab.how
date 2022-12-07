@@ -1,16 +1,43 @@
 import random
+from functools import wraps
 
 from flask import Flask, redirect, render_template
 
-app = Flask(__name__)
+bhow = ["backstab.how", "www.backstab.how", "spy.backstab.how"]
+gay = ["kunai.gay", "www.kunai.gay", "my.kunai.gay", "your.kunai.gay"]
+all = bhow.copy()
+all.extend(gay)
 
 
-@app.route('/')
+def router(url, host=all):
+    def decorator_bhow(function):
+        wraps(function)
+        url_decs = []
+        # get decorators for all hosts
+        for name in host:
+            url_decs.append(app.route(url, host=name))
+        # apply decorators
+        func = function
+        for decorator in url_decs:
+            func = decorator(func)
+        return func
+    return decorator_bhow
+
+
+app = Flask(__name__, host_matching=True, static_host="backstab.how")
+
+
+@router('/', host=bhow)
 def friendmovie():
     return render_template('friendmovie.html')
 
 
-@app.route('/friend')
+@router("/", host=gay)
+def kunaigay():
+    return render_template('kunai.html')
+
+
+@router('/friend')
 def random_friend():
     return redirect(
         random.choice([
@@ -63,9 +90,11 @@ def moo():
 def fiona():
     return redirect('http://steamcommunity.com/profiles/76561198133234284')
 
+
 @app.route('/lucid')
 def lucid():
     return redirect('https://steamcommunity.com/profiles/76561198043754845')
+
 
 @app.route('/klown')
 @app.route('/acapella')
